@@ -1,5 +1,7 @@
 import CardGroup from "@/components/CardGroup";
 import type { CardElement } from "@/types";
+import { Navigation } from "@/components/Navigation";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   const cards: CardElement[] = [
@@ -43,7 +45,13 @@ function App() {
       },
   ];
 
-  return <CardGroup cardElements={cards} />;
+  return (
+    <div>
+    <Navigation></Navigation>
+    <HeroSection />
+    <CardGroup cardElements={cards} />
+</div>
+  );
 }
 
 export default App;
